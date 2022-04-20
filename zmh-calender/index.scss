@@ -1,0 +1,98 @@
+@import '@/theme/theme.scss';
+.content_div {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  background-color: white;
+  position: fixed;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  z-index: 100;
+}
+.float_view {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+}
+.top_header {
+  height: 104px;
+  width: 750px;
+  @include border(bottom, 1, #e0e0e0);
+}
+.header_text {
+  font-size: 32px;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+  color: #000000;
+}
+.header_text_left {
+  font-size: 30px;
+  color: #000;
+  margin-left: 30px;
+}
+.header_text_left_sel {
+  font-size: 30px;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+  color: $mainColor;
+  margin-left: 30px;
+}
+.header_text_right {
+  font-size: 32px;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+  color: $mainColor;
+  margin-right: 30px;
+}
+.close {
+  margin-left: 30px;
+  width: 80px;
+  height: 80px;
+}
+.close_img {
+  width: 40px;
+  height: 40px;
+}
+
+.sub_item_container {
+  height: 700px;
+  width: 750px;
+}
+.column {
+  @include border(right, 1, #e0e0e0);
+}
+.sel_cell {
+  height: 100px;
+  margin-left: 10px;
+  margin-right: 10px;
+  @include border(bottom, 1, #f0f0f0);
+}
+
+.item_text {
+  font-size: 30px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #000000;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.text_sel {
+  color: $mainColor;
+}
+.mil_top_line {
+  background-color: $mainColor;
+  height: 2px;
+  width: 750px;
+  top: 300px;
+  position: absolute;
+}
+.mil_bto_line {
+  background-color: $mainColor;
+  height: 2px;
+  width: 750px;
+  top: 400px;
+  position: absolute;
+}

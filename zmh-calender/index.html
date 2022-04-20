@@ -1,0 +1,27 @@
+<div class="float_view">
+  <wxc-overlay :show="true" :hasAnimation="false" opacity="0.6" :top="top"></wxc-overlay>
+  <div class="content_div  flex_pack_justify flex_orient_center">
+    <div class="top_header box flex_orient_center flex_pack_justify">
+      <div class="close flex_orient_center flex_pack_center" @click="closeBtnAction">
+        <image class="close_img" src="/images/common/close_btn.png"></image>
+      </div>
+      <text :class="[ title === leftText?'header_text_left_sel':'header_text_left']" @click="noLimitedDate"
+        v-if="leftText.length>0">{{leftText}}</text>
+      <text class="header_text">{{title}}</text>
+      <text class="header_text_right" @click="confirmAction">确定</text>
+    </div>
+    <div class="sub_item_container box">
+      <div class="box_flex column" v-for="(firstItem,firstIndex) in dataSource">
+        <scroller class="scroller" show-scrollbar="false" @scroll="scrollingAction($event,firstIndex)"
+          @scrollend="scrollendAction($event,firstIndex)">
+          <div class="sel_cell" v-for="(secondItem, secondIndex) in firstItem" :ref="'item'+firstIndex+secondItem">
+            <text class="item_text" :class="[selCalenderDic[firstIndex].index == secondIndex ?'text_sel':'']"
+              @click="cellSelAction(secondItem,firstIndex,secondIndex)" v-if="secondItem>0">{{secondItem}}</text>
+          </div>
+        </scroller>
+      </div>
+      <div class="mil_top_line" v-if="level == 3"></div>
+      <div class="mil_bto_line" v-if="level == 3"></div>
+    </div>
+  </div>
+</div>
