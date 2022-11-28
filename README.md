@@ -10,7 +10,10 @@
     v-if="zmhClaenderSeting.show" 
     :level="zmhClaenderSeting.level" 
     :start="zmhClaenderSeting.start" 
-    :length="zmhClaenderSeting.length"    :defaultDate="zmhClaenderSeting.defaultDate" @selResultAction="zmhCalenderSelResultAction" @closeAction="zmhCalenderCloseAction">
+    :length="zmhClaenderSeting.length"   
+    :defaultDate="zmhClaenderSeting.defaultDate" 
+    @selResultAction="zmhCalenderSelResultAction"
+    @closeAction="zmhCalenderCloseAction">
 </calender>
 
 
